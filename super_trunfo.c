@@ -31,19 +31,19 @@ int main(){
     printf("Defina o código da primeira carta, digitando a letra do primeiro estado, seguida de um número de 01 a 04 (exemplo: A01, A02...): \n");
     scanf("%s", &codigocarta1); //Solicitação e coleta do código da carta 1
 
-    printf("Digite o nome da primeira cidade: \n");
+    printf("Digite o nome da cidade: \n");
     scanf("%s", &cidade1); //Solicitação e coleta do nome da cidade 1
 
-    printf("Defina o número de habitantes da primeira cidade: \n");
+    printf("Defina o número de habitantes da cidade: \n");
     scanf("%d", &populacao1); //Solicitação e coleta da população da cidade 1
 
-    printf("Digite a área da primeira cidade em quilômetros quadrados: \n");
+    printf("Digite a área da cidade em quilômetros quadrados: \n");
     scanf("%f", &area1); //Solicitação e coleta da área da cidade 1 em km² 
 
-    printf("Digite o PIB - Produto Interno Bruto da primeira cidade: \n");
+    printf("Digite o PIB - Produto Interno Bruto da cidade: \n");
     scanf("%f", &pib1); //Solicitação e coleta do PIB da cidade 1
 
-    printf("Digite o número de pontos turísticos existentes na primeira cidade: \n");
+    printf("Digite o número de pontos turísticos existentes na cidade: \n");
     scanf("%d", &pontosturisticos1); //Solicitação do número de pontos turísticos existentes na cidade 1
 
 
@@ -59,19 +59,19 @@ int main(){
     printf("Defina o código da carta, digitando a letra do segundo estado, seguida de um número de 01 a 04 (exemplo: A01, A02...): \n");
     scanf("%s", &codigocarta2); //Solicitação e coleta do nome do estado 2
     
-    printf("Digite o nome da segunda cidade: \n");
+    printf("Digite o nome da cidade: \n");
     scanf("%s", &cidade2); //Solicitação e coleta do nome da cidade 2
     
-    printf("Defina o número de habitantes da segunda cidade: \n");
+    printf("Defina o número de habitantes da cidade: \n");
     scanf("%d", &populacao2); //Solicitação e coleta da população da cidade 2
     
-    printf("Digite a área da segunda cidade em quilômetros quadrados: \n");
+    printf("Digite a área da cidade em quilômetros quadrados: \n");
     scanf("%f", &area2); //Solicitação e coleta da área da cidade 2 em km² 
     
-    printf("Digite o PIB - Produto Interno Bruto da segunda cidade: \n");
+    printf("Digite o PIB - Produto Interno Bruto da cidade: \n");
     scanf("%f", &pib2); //Solicitação e coleta do PIB da cidade 2
     
-    printf("Digite o número de pontos turísticos existentes na segunda cidade: \n");
+    printf("Digite o número de pontos turísticos existentes na cidade: \n");
     scanf("%d", &pontosturisticos2); //Solicitação do número de pontos turísticos existentes na cidade 2
 
     printf("\n"); // Adiciona uma linha em branco

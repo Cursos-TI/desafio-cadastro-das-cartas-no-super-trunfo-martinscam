@@ -7,12 +7,14 @@ int main(){
     int populacao1, pontosturisticos1;
     char estado1, codigocarta1[4], cidade1[50];
     float area1, pib1;
+    float densidade1, percapita1;
 
     //Declaração das variáveis utilizadas para coletar os dados da carta 2
 
     int populacao2, pontosturisticos2;
     char estado2, codigocarta2[4], cidade2[50];
     float area2, pib2;
+    float densidade2, percapita2;
 
 
     //Apresentação dos comandos
@@ -26,7 +28,7 @@ int main(){
 
 
     printf("Defina uma letra entre A e H para representar o primeiro estado: \n");
-    scanf("%c", &estado1); //Solicitação e coleta da letra que representa o estado 1
+    scanf(" %c", &estado1); //Solicitação e coleta da letra que representa o estado 1
 
     printf("Defina o código da primeira carta, digitando a letra do primeiro estado, seguida de um número de 01 a 04 (exemplo: A01, A02...): \n");
     scanf("%s", &codigocarta1); //Solicitação e coleta do código da carta 1
@@ -94,9 +96,19 @@ int main(){
 
     printf("Área: %.2f km² \n", area1); //Exibição da área da cidade 1
 
-    printf("PIB: %.2f\n", pib1); //Exibição do PIB da cidade 1
+    printf("PIB: %.2f bilhões de reais\n", pib1); //Exibição do PIB da cidade 1
 
     printf("Pontos Turísticos: %d\n", pontosturisticos1); //Exibição do número de pontos turísticos na cidade 1
+
+    
+    densidade1 = (float) populacao1 / area1; //Calcula a densidade populacional, dividindo o valor populacional pela área da cidade
+
+    percapita1 = (float) pib1 / populacao1; //Calcula o PIB Per Capita, dividindo o valor do PIB pelo valor populacional da cidade
+
+
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1); //Exibe o valor da densidade populacional calculado acima
+    
+    printf("PIB Per Capita: %.2f reais\n", percapita1); //Exibe o valor do PIB Per Capita calculado acima
 
     
     printf("\n"); // Adiciona uma linha em branco
@@ -119,9 +131,19 @@ int main(){
 
     printf("Área: %.2f km² \n", area2); //Exibição da área da cidade 2
 
-    printf("PIB: %.2f\n", pib2); //Exibição do PIB da cidade 2
+    printf("PIB: %.2f bilhões de reais\n", pib2); //Exibição do PIB da cidade 2
 
     printf("Pontos Turísticos: %d\n", pontosturisticos2); //Exibição do número de pontos turísticos na cidade 2
+
+
+    densidade2 = (float) populacao2 / area2; //Calcula a densidade populacional, dividindo o valor populacional pela área da cidade
+
+    percapita2 = (float) pib2 / populacao2; //Calcula o PIB Per Capita, dividindo o valor do PIB pelo valor populacional da cidade
+
+
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2); //Exibe o valor da densidade populacional calculado acima
+    
+    printf("PIB Per Capita: %.2f reais\n", percapita2); //Exibe o valor do PIB Per Capita calculado acima
 
 
     

@@ -8,6 +8,7 @@ int main(){
     char estado1, codigocarta1[4], cidade1[50];
     float area1, pib1;
     float densidade1, percapita1;
+    float superpoder1;
 
     //Declaração das variáveis utilizadas para coletar os dados da carta 2
 
@@ -15,11 +16,13 @@ int main(){
     char estado2, codigocarta2[4], cidade2[50];
     float area2, pib2;
     float densidade2, percapita2;
+    float superpoder2;
 
-
+      
     //Apresentação dos comandos
 
     printf("Realize o cadastro de duas cartas de Super Trunfo, seguindo as próximas instruções: \n");
+
 
     printf("\n"); // Adiciona uma linha em branco
 
@@ -28,7 +31,7 @@ int main(){
 
 
     printf("Defina uma letra entre A e H para representar o primeiro estado: \n");
-    scanf(" %c", &estado1); //Solicitação e coleta da letra que representa o estado 1
+    scanf("%c", &estado1); //Solicitação e coleta da letra que representa o estado 1
 
     printf("Defina o código da primeira carta, digitando a letra do primeiro estado, seguida de um número de 01 a 04 (exemplo: A01, A02...): \n");
     scanf("%s", &codigocarta1); //Solicitação e coleta do código da carta 1
@@ -76,6 +79,7 @@ int main(){
     printf("Digite o número de pontos turísticos existentes na cidade: \n");
     scanf("%d", &pontosturisticos2); //Solicitação do número de pontos turísticos existentes na cidade 2
 
+
     printf("\n"); // Adiciona uma linha em branco
 
 
@@ -101,14 +105,17 @@ int main(){
     printf("Pontos Turísticos: %d\n", pontosturisticos1); //Exibição do número de pontos turísticos na cidade 1
 
     
-    densidade1 = (float) populacao1 / area1; //Calcula a densidade populacional, dividindo o valor populacional pela área da cidade
+    densidade1 = populacao1 / area1; //Calcula a densidade populacional, dividindo o valor populacional pela área da cidade
 
-    percapita1 = (float) pib1 / populacao1; //Calcula o PIB Per Capita, dividindo o valor do PIB pelo valor populacional da cidade
+    percapita1 = pib1 / populacao1; //Calcula o PIB Per Capita, dividindo o valor do PIB pelo valor populacional da cidade
 
 
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1); //Exibe o valor da densidade populacional calculado acima
     
     printf("PIB Per Capita: %.2f reais\n", percapita1); //Exibe o valor do PIB Per Capita calculado acima
+
+
+    superpoder1 = populacao1 + area1 + pib1 + pontosturisticos1 + percapita1 + (1 / densidade1); //Soma todos os atributos da carta 1, incluindo o inverso da densidade para garantir mais pontos para quem tiver a densidade menor
 
     
     printf("\n"); // Adiciona uma linha em branco
@@ -146,7 +153,28 @@ int main(){
     printf("PIB Per Capita: %.2f reais\n", percapita2); //Exibe o valor do PIB Per Capita calculado acima
 
 
-    
+    superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + percapita2 + (1 / densidade2); //Soma todos os atributos da carta 2, incluindo o inverso da densidade para garantir mais pontos para quem tiver a densidade menor
+
+
+    printf("Comparação de Cartas:\n");
+
+
+    printf("\n"); // Adiciona uma linha em branco
+
+       
+    printf("População: Carta %d venceu (%d)\n", (populacao1 > populacao2) ? 1 : 2, (populacao1 > populacao2) ? 1 : 0); //Utilizado operador ternário para determminar qual carta vence, e retornar o valor final, se verdadeiro ou falso, da forma mais simplificada possível
+
+    printf("Área: Carta %d venceu (%d)\n", (area1 > area2) ? 1 : 2, (area1 > area2) ? 1 : 0);
+
+    printf("PIB: Carta %d venceu (%d)\n", (pib1 > pib2) ? 1 : 2, (pib1 > pib2) ? 1 : 0);
+
+    printf("Pontos Turísticos: Carta %d venceu (%d)\n", (pontosturisticos1 > pontosturisticos2) ? 1 : 2, (pontosturisticos1 > pontosturisticos2) ? 1 : 0);
+
+    printf("Densidade Populacional: Carta %d venceu (%d)\n", (densidade1 < densidade2) ? 1 : 2, (densidade1 < densidade2) ? 1 : 0); //Utilizado operador < pois a densidade menor ganha mais pontos
+
+    printf("PIB Per Capita: Carta %d venceu (%d)\n", (percapita1 > percapita2) ? 1 : 2, (percapita1 > percapita2) ? 1 : 0);
+
+    printf("Super Poder: Carta %d venceu (%d)\n", (superpoder1 > superpoder2) ? 1 : 2, (superpoder1 > superpoder2) ? 1 : 0);
 
 
 return 0;
